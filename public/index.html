@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="wxr-ShortUrl">
+
+<head>
+	<meta charset="UTF-8">
+	<title>ShortUrl</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="stylesheets/index.css">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="top-bar">
+				<span>Short Url Generator</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="content" ng-controller="shortUrl-controller">
+				<div class="input-part">
+					<div class="form-group">
+						<span class="title">Make your URL shorter</span>
+						<input required class="form-control input-text" type="text" ng-model="longUrl" placeholder="Enter original URL here" />
+						<button class="form-control" id="shorten" ng-click="shortenFun()">Shorten It</button>
+						<span class="error">{{errorData}}</span>
+					</div>
+				</div>
+				<div class="show-part" ng-model="show">
+					<table class="table table-hover">
+						<tr>
+							<th>Original URL</th>
+							<th>Short URL</th>
+						</tr>
+						<tr class="active" ng-if="show">
+							<td><a target="_blank" href="http://{{longUrlShow}}">{{longUrlShow}}</a></td>
+							<td><a target="_blank" href="http://{{shortUrl}}">{{shortUrl}}</a></td>
+						</tr>
+						<tr ng-repeat='x in list' ng-class="{'item-last':$last}">
+							<td>
+								<a target="_blank" href="http://{{x.lUrl}}">{{x.lUrl}}</a></td>
+							<td><a target="_blank" href="http://{{x.sUrl}}">{{x.sUrl}}</a></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="footer">
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="javascripts/angular.min.js"></script>
+	<script src="javascripts/shortUrl.js"></script>
+</body>
+
+</html>

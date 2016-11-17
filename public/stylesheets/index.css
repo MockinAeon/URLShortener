@@ -1,0 +1,103 @@
+body {
+	background-color: rgb(251, 251, 249);
+}
+
+.top-bar {
+	background-color: rgb(140, 22, 21);
+	margin-top: 0;
+	height: 90px;
+	float: left;
+	width: 100%;
+}
+
+.top-bar span {
+	font-size: 35px;
+	color: white;
+	font-family: serif;
+	word-spacing: 0px;
+	letter-spacing: 3px;
+	width: 74%;
+	margin-left: 13%;
+	margin-right: 13%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	float: left;
+}
+.content{
+	
+}
+.input-part {
+	background-color: rgb(242, 241, 235);
+	height: 200px;
+	padding: 50px;
+	
+}
+.input-part span.title {
+	font-family: serif;
+	float: left;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	font-size: 25px;
+	border-bottom: 1px solid lightgray;
+	margin-bottom: 20px;
+}
+.input-part input {
+	font-family: serif;
+	width: 35%;
+	float: left;
+	margin-left: 10%;
+}
+
+.input-part button {
+	font-family: serif;
+	width: 10%;
+	float: left;
+	margin-left: 3%;
+	font-weight: 600;
+}
+.error {
+	display: none;
+	border-radius: 3px;
+	float: left;
+	margin-left: 6%;
+	padding: 4px 3%;
+	font-size: 18px;
+	background-color: rgba(213,208,192,0.5);
+}
+
+.show-part {
+	height: 200px;
+	padding: 50px;
+}
+.show-part table{
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.show-part table tr th {
+	font-size: 18px;
+	padding-left: 40px;
+}
+.show-part table tr td {
+	padding-left: 40px;
+}
+
+.show-part table tr td a {
+	color: rgb(130, 1, 0);
+	font-size: 15px;
+	text-decoration: none;
+}
+
+.footer {
+	background-color: rgb(140, 22, 21);
+	margin-bottom: 0;
+	height: 50px;
+	float: left;
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+}
+.item-last{
+	display: none;
+}
